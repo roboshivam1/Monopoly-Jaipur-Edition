@@ -52,9 +52,9 @@ theme = st.selectbox(
 # --- APPLY CSS FUNCTION ---
 def load_css(theme_name):
     css_files = {
-        "Classic Edition": "themes/classic_design.css",
-        "Deluxe Edition": "themes/deluxe_design.css",
-        "Ultimate Banking Edition": "themes/ultimate_design.css"
+        "Classic Edition": "classic_design.css",
+        "Deluxe Edition": "deluxe_design.css",
+        "Ultimate Banking Edition": "ultimate_design.css"
     }
 
     if theme_name in css_files:
@@ -177,3 +177,4 @@ with status_placeholder.container():
         st.dataframe(players_df, width='stretch')
     else:
         st.info("👋 Add players to start your Monopoly Jaipur game!")
+

@@ -1,0 +1,283 @@
+/* Monopoly Classic Board Design CSS */
+
+/* Main App Background */
+.stApp {
+    background: linear-gradient(135deg, #e8f4f0 0%, #d4e9e2 100%);
+    font-family: 'Kabel', 'Arial Black', sans-serif;
+}
+
+/* Title Styling */
+h1 {
+    color: #c8102e !important;
+    text-align: center;
+    font-weight: 900 !important;
+    font-size: 3.5rem !important;
+    text-shadow: 3px 3px 0px #000000, 
+                 6px 6px 0px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    margin-bottom: 2rem !important;
+    padding: 1rem;
+    background: #ffffff;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tab Styling */
+.stTabs {
+    background: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background: #f7f7f7;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 100%);
+    border: 2px solid #000000 !important;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: linear-gradient(180deg, #fff9e6 0%, #ffe8b3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(180deg, #c8102e 0%, #a00d24 100%) !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Subheader Styling */
+h3 {
+    color: #000000 !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid #c8102e;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input {
+    border: 2px solid #000000 !important;
+    border-radius: 4px;
+    background: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus {
+    border-color: #c8102e !important;
+    box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.2) !important;
+}
+
+/* Select Boxes */
+.stSelectbox > div > div {
+    border: 2px solid #000000 !important;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 100%);
+    color: #000000;
+    border: 3px solid #000000 !important;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #666666;
+    cursor: pointer;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(180deg, #fff9e6 0%, #ffe8b3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #666666;
+}
+
+.stButton > button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #666666;
+}
+
+/* Primary Action Buttons (Add, Buy, Pay) */
+.stButton > button[kind="primary"],
+div[data-testid="column"]:first-child .stButton > button {
+    background: linear-gradient(180deg, #4caf50 0%, #388e3c 100%);
+    color: #ffffff;
+}
+
+div[data-testid="column"]:first-child .stButton > button:hover {
+    background: linear-gradient(180deg, #66bb6a 0%, #4caf50 100%);
+}
+
+/* Radio Buttons */
+.stRadio > div {
+    background: #f7f7f7;
+    padding: 1rem;
+    border: 2px solid #000000;
+    border-radius: 6px;
+}
+
+.stRadio > div > label {
+    font-weight: 600;
+}
+
+/* Success Messages */
+.stSuccess {
+    background: #4caf50 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* Error Messages */
+.stError {
+    background: #c8102e !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* Info Messages */
+.stInfo {
+    background: #2196f3 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* DataFrame Styling */
+.stDataFrame {
+    border: 3px solid #000000 !important;
+    border-radius: 8px;
+    overflow: visible !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stDataFrame > div {
+    background: #ffffff;
+}
+
+/* Preserve DataFrame Toolbar */
+div[data-testid="stDataFrameResizable"] {
+    overflow: visible !important;
+}
+
+/* Style DataFrame Toolbar Buttons */
+button[data-testid="StyledFullScreenButton"],
+button[data-testid="baseButton-header"],
+div[data-testid="stDataFrameResizable"] button {
+    background: #ffffff !important;
+    border: 2px solid #000000 !important;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+
+button[data-testid="StyledFullScreenButton"]:hover,
+button[data-testid="baseButton-header"]:hover,
+div[data-testid="stDataFrameResizable"] button:hover {
+    background: #f0f0f0 !important;
+    border-color: #c8102e !important;
+}
+
+/* DataFrame Headers */
+thead tr th {
+    background: linear-gradient(180deg, #c8102e 0%, #a00d24 100%) !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border: 2px solid #000000 !important;
+    padding: 1rem !important;
+    text-align: center !important;
+}
+
+/* DataFrame Rows */
+tbody tr {
+    border-bottom: 2px solid #e0e0e0 !important;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f7f7 !important;
+}
+
+tbody tr:hover {
+    background: #fff9e6 !important;
+}
+
+tbody td {
+    border: 1px solid #e0e0e0 !important;
+    padding: 0.75rem !important;
+    font-weight: 600;
+}
+
+/* Column Layout */
+div[data-testid="column"] {
+    padding: 0.5rem;
+}
+
+/* Labels */
+label {
+    font-weight: bold !important;
+    color: #000000 !important;
+    font-size: 1rem !important;
+}
+
+/* Spinner/Loading */
+.stSpinner > div {
+    border-top-color: #c8102e !important;
+}
+
+/* Property Color Accents */
+.stSelectbox[data-baseweb="select"] {
+    position: relative;
+}
+
+/* Container Spacing */
+.block-container {
+    padding: 2rem 3rem;
+}
+
+/* Corner Decoration */
+h1::before {
+    content: "";
+}
+
+h1::after {
+    content: "";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    .stButton > button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

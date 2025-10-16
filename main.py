@@ -22,6 +22,11 @@ players = st.session_state.players
 if 'selling' not in st.session_state:
     st.session_state.selling = False
 
+if 'bought' not in st.session_state:
+    st.session_state.bought = []
+
+bought = st.session_state.bought
+
 #------------------------------------------
 #   SAVE TO CSV FUNCTION
 #------------------------------------------
@@ -130,10 +135,14 @@ with tab3:
     with col1:
         if st.button("Buy Property"):
             if players[selected_player_t2]['cash'] >= property_price:
-                players[selected_player_t2]["cash"] -= property_price
-                players[selected_player_t2]["properties"].append(property_choice)
-                st.success(f"{selected_player_t2} bought {property_choice} for ₹{property_price}")
-                save_to_csv()
+                if property_choice  not in bought:
+                    players[selected_player_t2]["cash"] -= property_price
+                    players[selected_player_t2]["properties"].append(property_choice)
+                    bought.append(property_choice)
+                    st.success(f"{selected_player_t2} bought {property_choice} for ₹{property_price}")
+                    save_to_csv()
+                else:
+                    st.error('Property already owned')
             else:
                 st.error("Not enough cash!")
     with col2:
@@ -177,4 +186,3 @@ with status_placeholder.container():
         st.dataframe(players_df, width='stretch')
     else:
         st.info("👋 Add players to start your Monopoly Jaipur game!")
-

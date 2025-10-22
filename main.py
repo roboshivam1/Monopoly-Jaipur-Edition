@@ -156,6 +156,7 @@ with tab3:
             sell_price = st.number_input("Sell Price", min_value=0, step=10, key="sell_price")
             if st.button("Confirm Sell"):
                 players[selected_player_t2]["properties"].remove(prop_to_sell)
+                bought.remove(prop_to_sell)
                 players[selected_player_t2]["cash"] += sell_price
                 st.success(f"Sold {prop_to_sell} for ₹{sell_price}")
                 save_to_csv()
@@ -186,3 +187,4 @@ with status_placeholder.container():
         st.dataframe(players_df, width='stretch')
     else:
         st.info("👋 Add players to start your Monopoly Jaipur game!")
+

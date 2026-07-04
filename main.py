@@ -51,7 +51,7 @@ def calculate_total_worth(player):
 # --- THEME SELECTOR ---
 theme = st.selectbox(
     "🎨 Choose Edition Theme",
-    ["Normal Streamlit", "Classic Edition", "Deluxe Edition", "Ultimate Banking Edition"]
+    ["Normal Streamlit", "Classic Edition", "Deluxe Edition", "Ultimate Banking Edition", "Minecraft Edition"]
 )
 
 # --- APPLY CSS FUNCTION ---
@@ -59,7 +59,8 @@ def load_css(theme_name):
     css_files = {
         "Classic Edition": "classic_design.css",
         "Deluxe Edition": "deluxe_design.css",
-        "Ultimate Banking Edition": "ultimate_design.css"
+        "Ultimate Banking Edition": "ultimate_design.css",
+        "Minecraft Edition": "minecraft_design.css"
     }
 
     if theme_name in css_files:
